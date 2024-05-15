@@ -9,12 +9,6 @@ class Ui_Calculator(object):
         Calculator.setFixedWidth(211)
         Calculator.setFixedHeight(320) 
         Calculator.title = ('Calculator')     
-        Calculator.setStyleSheet("background_color: grey;\n"
-                        "border_style: outset;\n"
-                        "border-width: 2px;\n"
-                        "border-color: black\n"
-                        "\n"
-                        "")
         QtWidgets.QMainWindow.setWindowTitle(Calculator, "Calculator")
 
         self.btn_1 = QtWidgets.QPushButton(parent=Calculator)
@@ -113,8 +107,8 @@ class Ui_Calculator(object):
         QtCore.QMetaObject.connectSlotsByName(Calculator)
 
     def set_stylesheet(self, item): # gomb stílus metódus
-        item.setStyleSheet("QPushButton { background-color: LightGray; border:1px solid black }"
-                           "QPushButton:pressed { background-color: gray; border:1px solid black }")
+        item.setStyleSheet("QPushButton { background-color: LightGray; border-style:solid }"
+                           "QPushButton:pressed { background-color: gray; border-style:solid }")
 
     def update_label(self, btn): # LABEL string update metódus
         # ha még nincs karakter a kijelzőn, akkor csak '-' gomb vagy szám nyomható
